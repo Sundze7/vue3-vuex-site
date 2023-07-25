@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import MealList from "../views/MealList.vue";
+import SearchByLetter from "../views/SearchByLetter.vue";
 
 const routes = [
   {
@@ -11,7 +11,7 @@ const routes = [
   {
     path: "/letter/:letter",
     name: "byLetter",
-    component: MealList,
+    component: SearchByLetter,
   },
   // {
   //   path: "/about",

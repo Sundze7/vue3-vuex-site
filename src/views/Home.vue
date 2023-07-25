@@ -3,7 +3,7 @@
     <input
       type="text"
       class="rounded border-2 border-gray-200 w-full"
-      placeholder="Search for Meals"
+      placeholder="Search Meals"
     />
     <div class="flex gap-2 mt-2 justify-center">
       <router-link
