@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8">
+  <div class="p-8 pb-0">
     <input
       type="text"
       v-model="keyword"
@@ -9,21 +9,59 @@
     />
   </div>
 
-  <div>
-    <pre>{{ meals }}</pre>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
+    <div
+      v-for="meal in meals"
+      :key="meal.idMeal"
+      class="bg-white shadow rounded"
+    >
+      <router-link to="">
+        <img
+          :src="meal.strMealThumb"
+          :alt="strMeal"
+          class="rounded-t-xl w-full h-48 object-cover"
+        />
+      </router-link>
+      <div class="p-3">
+        <h3 class="font-semibold">{{ meal.strMeal }}</h3>
+        <p class="mb-4 text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          tenetur numquam, possimus, quas, laboriosam ex qui nihil minus
+          eligendi expedita deserunt nostrum vitae repellat! Quibusdam quisquam
+          quia accusantium ea minima!
+        </p>
+        <div class="">
+          <a
+            :href="meal.strYoutube"
+            target="_blank"
+            class="px-3 py-2 rounded border-2 border-red-600 bg-red-500 hover:bg-red-600 text-white transition-colors"
+            >YouTube</a
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 // import axiosClient from "@/axiosClient";
 import store from "@/store";
+import { useRoute } from "vue-router";
 
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 
+const route = useRoute();
 const keyword = ref("");
 const meals = computed(() => store.state.searchedMeals);
 
 function searchMeals() {
   store.dispatch("searchMeals", keyword.value);
 }
+
+onMounted(() => {
+  keyword.value = route.params.name;
+  if (keyword.value) {
+    searchMeals();
+  }
+});
 </script>
