@@ -30,6 +30,11 @@ const routes = [
         name: "byLetter",
         component: MealsByLetter,
       },
+      {
+        path: "/meal/:id",
+        name: "mealDetails",
+        component: () => import("@/views/MealDetails.vue"),
+      },
     ],
   },
   // {
