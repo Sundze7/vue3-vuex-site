@@ -30,13 +30,8 @@
           eligendi expedita deserunt nostrum vitae repellat! Quibusdam quisquam
           quia accusantium ea minima!
         </p>
-        <div class="">
-          <a
-            :href="meal.strYoutube"
-            target="_blank"
-            class="px-3 py-2 rounded border-2 border-red-600 bg-red-500 hover:bg-red-600 text-white transition-colors"
-            >YouTube</a
-          >
+        <div class="flex items-center justify-between">
+          <you-tube-button :href="meal.strYoutube">YouTube</you-tube-button>
         </div>
       </div>
     </div>
@@ -49,6 +44,8 @@ import store from "@/store";
 import { useRoute } from "vue-router";
 
 import { ref, computed, onMounted } from "vue";
+
+import YouTubeButton from "@/components/YouTubeButton.vue";
 
 const route = useRoute();
 const keyword = ref("");
