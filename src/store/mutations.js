@@ -3,10 +3,10 @@ const mutations = {
     state.searchedMeals = meals;
   },
   setMealsByLetter(state, meals) {
-    state.setMealsByLetter = meals;
+    state.mealsByLetter = meals;
   },
   setMealsByIngredient(state, meals) {
-    state.setMealsByIngredient = meals;
+    state.mealsByIngredient = meals;
   },
 };
 
