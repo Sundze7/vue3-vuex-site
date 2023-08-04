@@ -18,7 +18,7 @@
 import store from "@/store";
 import { useRoute } from "vue-router";
 
-import { computed, onMounted } from "vue";
+import { computed, onMounted, watch } from "vue";
 
 import MealItem from "@/components/MealItem.vue";
 
@@ -26,8 +26,11 @@ const route = useRoute();
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const meals = computed(() => store.state.mealsByLetter);
 
+watch(route, () => {
+  store.dispatch("searchMealsByLetter", route.params.letter);
+});
+
 onMounted(() => {
   store.dispatch("searchMealsByLetter", route.params.letter);
-  console.log(route.params.letter);
 });
 </script>
