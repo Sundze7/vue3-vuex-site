@@ -1,18 +1,18 @@
 <template>
-  <div>
-    <pre>{{ ingredients }}</pre>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
+    <meal-item v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
   </div>
 </template>
 
 <script setup>
-import axiosClient from "@/axiosClient";
-import { onMounted, ref } from "vue";
+import store from "@/store";
+import { computed, onMounted } from "vue";
+import { useRoute } from "vue-router";
 
-const ingredients = ref([]);
+const route = useRoute();
+const meals = computed(() => store.state.mealsByIngredient);
 
 onMounted(() => {
-  axiosClient.get("list.php?i=list").then(({ data }) => {
-    ingredients.value = data.meals;
-  });
+  store.dispatch("searchMealsByIngredient", route.params.ingredient);
 });
 </script>
