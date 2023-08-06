@@ -1,12 +1,12 @@
 const mutations = {
   setSearchedMeals(state, meals) {
-    state.searchedMeals = meals;
+    state.searchedMeals = meals || [];
   },
   setMealsByLetter(state, meals) {
-    state.mealsByLetter = meals;
+    state.mealsByLetter = meals || [];
   },
   setMealsByIngredient(state, meals) {
-    state.mealsByIngredient = meals;
+    state.mealsByIngredient = meals || [];
   },
 };
 
