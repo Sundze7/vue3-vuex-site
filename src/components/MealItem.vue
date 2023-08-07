@@ -12,7 +12,6 @@
       <p class="mb-4 text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
         tenetur numquam, possimus, quas, laboriosam ex qui nihil minus eligendi
-        expedita deserunt nostrum vitae repellat! Quibusdam quisquam quia
       </p>
       <div class="flex items-center justify-between">
         <you-tube-button :href="meal.strYoutube">YouTube</you-tube-button>

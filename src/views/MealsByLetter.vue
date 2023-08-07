@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-2 mt-2 justify-center">
+  <div class="flex gap-2 justify-center mt-8">
     <router-link
       :to="{ name: 'byLetter', params: { letter } }"
       v-for="letter of letters"
@@ -9,9 +9,7 @@
     </router-link>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
-    <meal-item v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
-  </div>
+  <Meals :meals="meals" />
 </template>
 
 <script setup>
@@ -20,7 +18,7 @@ import { useRoute } from "vue-router";
 
 import { computed, onMounted, watch } from "vue";
 
-import MealItem from "@/components/MealItem.vue";
+import Meals from "@/components/Meals.vue";
 
 const route = useRoute();
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
