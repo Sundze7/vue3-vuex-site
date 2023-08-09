@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./public/**/*.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        cover: "url('@/assets/img/cover.avif')",
+      },
+    },
   },
   plugins: [require("@tailwindcss/forms")],
 };

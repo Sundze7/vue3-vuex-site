@@ -1,5 +1,7 @@
 <template>
-  <router-view />
+  <div class="bg-cover h-full">
+    <router-view />
+  </div>
 </template>
 
 <style></style>
