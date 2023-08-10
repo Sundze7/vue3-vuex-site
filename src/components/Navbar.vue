@@ -1,6 +1,6 @@
 <template>
   <header
-    class="bg-white h-16 flex justify-between items-center text-lg font-semibold px-7 fixed w-full sha"
+    class="bg-yellow-100 h-16 flex justify-between items-center text-2xl font-semibold px-7 shadow-xl text-orange-800"
   >
     <router-link
       :to="{ name: 'home' }"
@@ -8,7 +8,7 @@
     >
       Home
     </router-link>
-    <div class="flex items-center gap-1">
+    <div class="flex items-center gap-4">
       <router-link
         :to="{ name: 'byName' }"
         class="inline-flex px-2 h-full transition-colors hover:bg-purple-100"
