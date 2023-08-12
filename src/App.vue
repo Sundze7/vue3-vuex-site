@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-cover bg-fixed h-full">
+  <div class="">
     <router-view class="mt-16" />
     <div class="">
       <h2>Welcome To Our Site</h2>

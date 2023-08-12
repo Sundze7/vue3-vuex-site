@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow-lg rounded hover:scale-105 transition-all">
+  <div class="bg-yellow-100 shadow-lg rounded hover:scale-105 transition-all">
     <router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }">
       <img
         :src="meal.strMealThumb"
@@ -8,7 +8,7 @@
       />
     </router-link>
     <div class="p-3">
-      <h3 class="font-semibold">{{ meal.strMeal }}</h3>
+      <h3 class="font-semibold text-orange-600">{{ meal.strMeal }}</h3>
       <p class="mb-4 text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
         tenetur numquam, possimus, quas, laboriosam ex qui nihil minus eligendi
