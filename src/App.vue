@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <router-view class="mt-16" />
-    <div class="flex flex-col items-end right-0 w-3/5">
+    <div v-if="shouldRenderDiv" class="flex flex-col items-end right-0 w-3/5">
       <div
         class="border bg-yellow-100 bg-opacity-80 translucent mt-10 p-8 rounded-xl"
       >
@@ -20,5 +20,21 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { ref, watch } from "vue";
+import { useRoute } from "vue-router";
+
+const shouldRenderDiv = ref(true);
+const route = useRoute();
+
+watch(
+  () => route.path,
+  (to) => {
+    // Replace this condition with your logic to determine when to render the div
+    shouldRenderDiv.value = to == "/";
+  }
+);
+</script>
 
 <style></style>
