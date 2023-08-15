@@ -1,15 +1,19 @@
 <template>
-  <div class="p-8 pb-0">
-    <input
-      type="text"
-      v-model="keyword"
-      class="rounded border-2 border-gray-100 w-full my-4"
-      placeholder="Search Meals"
-      @change="searchMeals"
-    />
-  </div>
+  <div class="flex flex-col items-center justify-center">
+    <div class="w-5/6">
+      <div class="p-8 pb-0">
+        <input
+          type="text"
+          v-model="keyword"
+          class="rounded border-2 border-gray-100 w-full my-4"
+          placeholder="Search Meals"
+          @change="searchMeals"
+        />
+      </div>
 
-  <Meals :meals="meals" />
+      <Meals :meals="meals" />
+    </div>
+  </div>
 </template>
 
 <script setup>
