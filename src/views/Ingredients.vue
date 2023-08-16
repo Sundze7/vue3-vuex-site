@@ -7,8 +7,8 @@
       <input
         type="text"
         v-model="keyword"
-        class="rounded border-2 border-gray-200 w-full mb-3 bg-gray-100 outline-orange-600"
-        placeholder="Search Ingredients"
+        class="rounded border-2 border-gray-200 w-full mb-6 bg-gray-100 outline-orange-600"
+        placeholder="Filter Ingredients"
       />
       <router-link
         :to="{
