@@ -5,8 +5,11 @@
       <div
         class="border bg-yellow-100 bg-opacity-80 translucent mt-10 p-8 rounded-xl"
       >
-        <h2 class="text-orange-600 text-4xl font-semibold mb-8">
+        <h2 class="text-orange-600 text-4xl font-semibold mb-2 text-center">
           Welcome To Our Site !!!
+        </h2>
+        <h2 class="text-orange-600 text-4xl font-semibold mb-8 text-center">
+          (FOOD RECIPE)
         </h2>
         <p class="max-w-lg text-justify text-xl">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
