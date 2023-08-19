@@ -2,12 +2,15 @@
   <header
     class="bg-yellow-100 h-16 flex justify-between items-center text-xl font-semibold px-7 shadow-xl text-orange-600"
   >
-    <router-link
-      :to="{ name: 'home' }"
-      class="inline-flex items-center h-full px-5 hover:border-2 hover:bg-orange-600 hover:text-yellow-100 rounded-lg transition-colors"
-    >
-      Home
-    </router-link>
+    <div class="flex flex-row gap-3 items-center">
+      <router-link
+        :to="{ name: 'home' }"
+        class="inline-flex items-center h-full px-5 hover:border-2 hover:bg-orange-600 hover:text-yellow-100 rounded-lg transition-colors py-4"
+      >
+        Home
+      </router-link>
+      <img src="../assets/img/logo2.png" alt="logo" class="w-20" />
+    </div>
     <div class="flex gap-4 items-center justify-center transition-colors">
       <router-link
         :to="{ name: 'byName' }"
